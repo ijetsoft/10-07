@@ -4,7 +4,7 @@ const app = express();
 require('dotenv').config();
 
 const port = process.env.PORT || 3000;
-const mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/weather';
+const mongoUri = process.env.MONGODB_URI //|| 'mongodb://127.0.0.1:27017/weather';
 
 const Weather = mongoose.model('Weather', {
   temperature: Number,
