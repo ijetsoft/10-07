@@ -12,7 +12,7 @@ app.use(async (req, res, next) => {
     next();
   } catch (error) {
     console.error('*Ошибка подключения к базе данных:', error.message);
-    res.status(500).json({ error: 'Ошибка подключения к базе данных' });
+    res.status(500).json({ error: '*Ошибка подключения к базе данных' });
   }
 });
 
