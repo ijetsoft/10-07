@@ -11,7 +11,7 @@ app.use(async (req, res, next) => {
     await connectDB();
     next();
   } catch (error) {
-    console.error('Ошибка подключения к базе данных:', error.message);
+    console.error('*Ошибка подключения к базе данных:', error.message);
     res.status(500).json({ error: 'Ошибка подключения к базе данных' });
   }
 });
@@ -31,10 +31,11 @@ app.get('/api/add', async (req, res) => {
     city: String,
     date: Date
   }); */
-  let temperature = 25
-  let city = 'Madrid'
+  let temperature = 28
+  let city = 'Warsow'
   let date = new Date()
   
+
   const newWeather = new Weather({
     temperature,
     city,
